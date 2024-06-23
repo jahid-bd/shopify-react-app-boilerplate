@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: theme('borderColor.DEFAULT', currentColor);
+  font-family: 'Inter', '-apple-system', 'BlinkMacSystemFont', 'San Francisco',
+    'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  @apply !bg-primary-25  text-natural-900;
+}
+
+.Polaris-Frame {
+  @apply !bg-primary-25;
+}
+
+button {
+  @apply cursor-pointer bg-inherit;
+}
+
+.Polaris-Button--variantPrimary,
+.Polaris-DatePicker__Day--selected,
+.Polaris-DatePicker__Day:hover {
+  background: #391363 !important;
+}
+
+.Polaris-DatePicker__Day--inRange {
+  background: #efecf3 !important;
+}
+
+.Polaris-RadioButton__Input:checked:not([disabled])
+  + .Polaris-RadioButton__Backdrop,
+.Polaris-RadioButton__ChoiceLabel:hover
+  .Polaris-RadioButton__Input:checked:not([disabled])
+  + .Polaris-RadioButton__Backdrop {
+  background: #391363 !important;
+}
+
+/* @layer components {
+  .Polaris-Button--variantPrimary {
+    @apply !bg-primary !h-9 !hover:bg-primary-600;
+  }
+
+  .Polaris-Button--variantSecondary {
+    @apply bg-natural-50 h-9 hover:bg-natural-100;
+  }
+
+  .Polaris-ShadowBevel {
+    @apply border-primary-100;
+  }
+} */
+
+.Polaris-TextField--multiline .Polaris-TextField__Input {
+  max-height: 90px !important;
+}
+
+.Polaris-Page {
+  padding: 0;
+}
+
+#sold_count .Polaris-ShadowBevel {
+  min-height: calc(100vh - 150px);
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px lightgrey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b3b4b6;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #391363;
+}
+
+.help-icon svg {
+  width: 24px;
+  height: 24px;
+  font-size: 30px;
+}
+
+.btn-loader svg {
+  fill: #ffffff;
+}
+
+.loader span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-loader svg {
+  fill: #cc341f;
+}
